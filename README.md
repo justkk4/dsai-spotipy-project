@@ -25,9 +25,9 @@ To follow the project in its sequential order, please view the notebooks in the 
 ## Dataset Files
 - dataset.csv (extracted using API)
 - time.csv ([Kaggle](https://www.kaggle.com/datasets/joebeachcapital/top-10000-spotify-songs-1960-now?resource=download) dataset)
-- merged20k.csv (dataset.csv + time.csv, cleaned)
+- **merged20k.csv** (dataset.csv + time.csv, cleaned)
     - used for [predicting artist popularity](predicting-popularity-from-genre-date.ipynb)
-- merged200k.csv (merged20k.csv + [Kaggle](https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db) dataset, cleaned)
+- **merged200k.csv** (merged20k.csv + [Kaggle](https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db) dataset, cleaned)
     - used for [predicting song popularity](predicting-popularity-from-audio-features.ipynb)
 
 ---
@@ -79,7 +79,7 @@ This notebook demonstrates how each of the four dataset files were created. The 
 
 [merged200k.csv](datasets/merged200k.csv) is the combination of merged20k.csv and another Kaggle dataset. Duplicate tracks were also removed.
 
-### <u>**data-visualisation.ipynb**</u>
+### <ins>**data-visualisation.ipynb**</ins>
 This notebook visualises the predictor and response variables of merged20k.csv and merged200k.csv. Both response and predictor variables are visualised independently. Predictor variables are also visualised with their respective response variable.
 
 > This notebook is also where the problem of an unbalanced dataset was discovered which motivated us to conduct data resampling.
