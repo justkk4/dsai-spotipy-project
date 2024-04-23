@@ -70,7 +70,7 @@ To follow the project in its sequential order, please view the notebooks in the 
 
 ---
 ## Overview of Each Notebook
-### <u>data-extraction.ipynb</u>
+### <u>**data-extraction.ipynb**</u>
 This notebook demonstrates how each of the four dataset files were created. The original base dataset (dataset.csv) is formed purely from extracting songs from Spotify using its web API. Helper functions utilising the API were written to extract the variables necessary for this project from Spotify. This data was then written to [dataset.csv](datasets/dataset.csv).
 
 [time.csv](datasets/time.csv) is a Kaggle dataset appended with its respective artist popularity values. The retrieval of artist popularity values was done using the API.
@@ -79,22 +79,22 @@ This notebook demonstrates how each of the four dataset files were created. The 
 
 [merged200k.csv](datasets/merged200k.csv) is the combination of merged20k.csv and another Kaggle dataset. Duplicate tracks were also removed.
 
-### <u>data-visualisation.ipynb</u>
+### <u>**data-visualisation.ipynb**</u>
 This notebook visualises the predictor and response variables of merged20k.csv and merged200k.csv. Both response and predictor variables are visualised independently. Predictor variables are also visualised with their respective response variable.
 
-This notebook is also where the problem of an unbalanced dataset was discovered which motivated us to conduct data resampling.
+> This notebook is also where the problem of an unbalanced dataset was discovered which motivated us to conduct data resampling.
 
-### <u>data-resampling.ipynb</u>
+### <u>**data-resampling.ipynb**</u>
 This notebook demonstrates the process of data resampling for merged200k.csv. Both regression and classificatio and sampling methods are demonstrated. The success of resampling is visualised in a countplot at the end of the notebook.
 
-### <u>predicting-popularity-from-genre-date.ipynb</u>
+### <u>**predicting-popularity-from-genre-date.ipynb**</u>
 This notebook demonstrates the use of both regression and classification models to predict artist popularity using artist genres and album release decade. It illustrates how regression models may not be suitable for this problem and shows the conversion of the original regression problem into a classification problem.
 
-Random Forest Regression was deemed to be the best regression model as it had the greatest explained variance and lowest RMSE. Logistic Lasso Regression was deemed to be the best classification model due to its high accuracy and low false positive rate.
+> Random Forest Regression was deemed to be the best regression model as it had the greatest explained variance and lowest RMSE. Logistic Lasso Regression was deemed to be the best classification model due to its high accuracy and low false positive rate.
 
 A predictor model is also demonstrated at the end of the notebook to demonstrate the ability of the two models.
 
-### <u>predicting-popularity-from-audio-features.ipynb</u>
+### <u>**predicting-popularity-from-audio-features.ipynb**</u>
 This notebook demonstrates the use of both regression and classification models to predict track popularity using audio features. Since data resampling was conducted for this analysis, non-sampled are compared against resampled datasets to see which performs better in the standard regression and classification models.
 
 The datasets that perform better are then fitted onto various regression/classification models. In the conclusion of the notebook, different conclusions for the best model are drawn for different contexts.
