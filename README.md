@@ -30,6 +30,8 @@ To follow the project in its sequential order, please view the notebooks in the 
 - **merged200k.csv** (merged20k.csv + [Kaggle](https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db) dataset, cleaned)
     - used for [predicting song popularity](predicting-popularity-from-audio-features.ipynb)
 
+> Other datasets seen in the 'datasets' folder are those saved after data resampling was conducted (i.e. they are resampled versions of merged200k.csv)
+
 ---
 ## Resampling Methods Used
 - SMOGN
