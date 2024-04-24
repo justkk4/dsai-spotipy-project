@@ -5,7 +5,7 @@ This is a submitted mini project for SC1015 (Introduction to Data Science and Ar
 
 To follow the project in its sequential order, please view the notebooks in the following order:
 1. [Data Extraction & Cleaning](data-extraction-and-cleaning.ipynb)
-    - client_id and client_secret has been hidden in this notebook for security reasons. The full notebook has been submitted via the submission portal
+    >client_id and client_secret has been hidden in this notebook for security reasons. The full notebook has been submitted via the submission portal
 2. [Data Visualisation](data-visualisation.ipynb)
 3. [Data Resampling](data-resampling.ipynb)
 4. [Predicting Artist Popularity using Artist Genres & Album Release Decade](predicting-popularity-from-genre-date.ipynb)
