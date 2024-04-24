@@ -90,7 +90,7 @@ This notebook visualises the predictor and response variables of merged20k.csv a
 This notebook demonstrates the process of data resampling for merged200k.csv. Both regression and classificatio and sampling methods are demonstrated. The success of resampling is visualised in a countplot at the end of the notebook.
 
 ### <ins>**predicting-popularity-from-genre-date.ipynb**</ins>
-This notebook demonstrates the use of both regression and classification models to predict artist popularity using artist genres and album release decade. It illustrates how regression models may not be suitable for this problem and shows the conversion of the original regression problem into a classification problem.
+This notebook demonstrates the use of both regression and classification models to predict artist popularity using artist genres and album release decade. It illustrates how regression models, while useful, may have limitations due to some inaccuracies, and shows the conversion of the original regression problem into a classification problem.
 
 > Random Forest Regression was deemed to be the best regression model as it had the greatest explained variance and lowest RMSE. Logistic Lasso Regression was deemed to be the best classification model due to its high accuracy and low false positive rate.
 
