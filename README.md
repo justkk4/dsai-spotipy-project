@@ -13,12 +13,12 @@ To follow the project in its sequential order, please view the notebooks in the 
 ---
 ## Contributions List
 - @justkk4 - Data Extraction & Cleaning, Data Visualisation
-- @ YUKI - Data Resampling, Predicting Song Popularity using Audio Features
-- @ WESLEY - Predicting Artist Popularity using Artist Genres & Album Release Decade
+- @yukiwukii - Data Resampling, Predicting Song Popularity using Audio Features
+- @HamsterW - Predicting Artist Popularity using Artist Genres & Album Release Decade
 
 ---
 ## Problem Definition
-- Can we predict if an artist is popular (artist popularity > 50) using artist genres & album release decade?
+- Can we predict if an artist is popular (artist popularity > median) using artist genres & album release decade?
 - Can we predict if a song is popular (track popularity > 50) using its audio features?
 
 ---
@@ -103,18 +103,33 @@ The datasets that perform better are then fitted onto various regression/classif
 
 ---
 ## Conclusions
-I HAVE NO IDEA WHAT TO WRITE HERE CAN YOU GUYS LET ME KNOW WHAT YOU GUYS CONCLUDED
+### <ins>Predicting Track Popularity using Audio Features</ins>
+- Gradient boosting regression is the most effective model for predicting Spotify's numerical popularity scores based on audio features. However, this model has a low goodness of fit
+- Converting the problem into a binary classification (popular vs. not popular) enhances accuracy. This requires resampling the training dataset to balance the counts of popular and unpopular tracks, reducing model bias
+- The random forest classifier consistently outperforms other models in predicting whether a track will be popular
+- Different resampling methods affect model performance and should be chosen based on an agency’s risk tolerance and available resources:
+  - Random Oversampling: Ideal for new agencies with limited budgets, promoting cautious prediction of track popularity
+  - Random Undersampling: Best for financially robust agencies, favoring aggressive predictions to potentially yield more popular tracks
+  - SMOTE and NearMiss: Suitable for agencies seeking a balanced approach, offering moderate outcomes between conservative and aggressive predictions
+
+### <ins>Predicting Artist Popularity using Artist Genres and Album Release Decade</ins>
+- Random Forest Regression is the best model for predicting Artist Popularity, since it is robust to noise in our data and can capture the complex interactions between our predictor variables of Artist Genres and Decade Released
+- Logistic Lasso Regression is the best classification model since it has the highest overall accuracy and lowest FPR
+- Our prediction tool is simple and effective for our Record Label Company to use when considering whether to invest in a potential artist
+- Our models effectively capture the non-linear relationship of Decade Released as a predictor variable, allowing our Record Label Company tο more accurately predict the popularity of an artist while taking into account current popularity trends of genres
 
 ---
 ## New Knowledge gained from project
 - Use of Spotify API 'Spotipy'
 - Managing unbalanced datasets using resampling methods
 - Using datetime to convert specific dates to decades
-- ???? (can talk about new models)
+- Regression and classification models not taught in course (e.g. Lasso Regression, Random Forest Regression)
+- How to convert categorical data with multiple labels into binary format using MultiLabelBinarizer, and analyse the correlation using ANOVA
 
 ---
 ## References
 - https://spotipy.readthedocs.io/en/2.22.1/
 - https://towardsdatascience.com/extracting-song-data-from-the-spotify-api-using-python-b1e79388d50
 - https://developer.spotify.com/documentation/web-api
-- (add all references pls)
+- https://thedataface.com/2016/09/culture/genre-lifecycles
+- http://proceedings.mlr.press/v74/branco17a/branco17a.pdf
